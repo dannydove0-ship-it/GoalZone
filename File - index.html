@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Goal Zone | Football Hub</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+
+    <div class="logo">
+      <span class="logo-ball">⚽</span>
+      <span>GOAL <strong>ZONE</strong></span>
+    </div>
+
+    <!-- THREE DOT MENU -->
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation">
+      ⋮
+    </button>
+
+  </header>
+
+
+  <!-- ================= SIDE MENU ================= -->
+
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <nav class="side-menu" id="sideMenu">
+
+    <div class="menu-header">
+      <div class="menu-logo">
+        ⚽ <strong>GOAL ZONE</strong>
+      </div>
+
+      <button class="close-btn" id="closeBtn">
+        ×
+      </button>
+    </div>
+
+    <div class="menu-links">
+
+      <a href="index.html" class="menu-link active">
+        <span>🏠</span>
+        <span>Home</span>
+      </a>
+
+      <a href="live.html" class="menu-link">
+        <span>🔴</span>
+        <span>Live</span>
+      </a>
+
+      <a href="matches.html" class="menu-link">
+        <span>📅</span>
+        <span>Matches</span>
+      </a>
+
+      <a href="standings.html" class="menu-link">
+        <span>🏆</span>
+        <span>Standings</span>
+      </a>
+
+      <a href="news.html" class="menu-link">
+        <span>📰</span>
+        <span>News</span>
+      </a>
+
+    </div>
+
+    <div class="menu-footer">
+      <p>Goal Zone</p>
+      <small>Your football world</small>
+    </div>
+
+  </nav>
+
+
+  <!-- ================= MAIN ================= -->
+
+  <main>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <span class="hero-tag">
+          ⚽ YOUR FOOTBALL WORLD
+        </span>
+
+        <h1>
+          Everything Football.
+          <span>One Zone.</span>
+        </h1>
+
+        <p>
+          Follow live scores, fixtures, results, standings
+          and the latest football news — all in one place.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="live.html" class="primary-btn">
+            🔴 View Live Matches
+          </a>
+
+          <a href="matches.html" class="secondary-btn">
+            View Matches →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= QUICK LINKS ================= -->
+
+    <section class="quick-section">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="small-title">EXPLORE</span>
+          <h2>Football Hub</h2>
+        </div>
+
+      </div>
+
+
+      <div class="quick-grid">
+
+
+        <!-- LIVE -->
+
+        <a href="live.html" class="quick-card live-card">
+
+          <div class="card-icon">
+            🔴
+          </div>
+
+          <div class="card-info">
+            <h3>Live</h3>
+            <p>Follow matches happening now</p>
+          </div>
+
+          <span class="arrow">→</span>
+
+        </a>
+
+
+        <!-- MATCHES -->
+
+        <a href="matches.html" class="quick-card">
+
+          <div class="card-icon">
+            📅
+          </div>
+
+          <div class="card-info">
+            <h3>Matches</h3>
+            <p>Results and upcoming fixtures</p>
+          </div>
+
+          <span class="arrow">→</span>
+
+        </a>
+
+
+        <!-- STANDINGS -->
+
+        <a href="standings.html" class="quick-card">
+
+          <div class="card-icon">
+            🏆
+          </div>
+
+          <div class="card-info">
+            <h3>Standings</h3>
+            <p>Check league tables</p>
+          </div>
+
+          <span class="arrow">→</span>
+
+        </a>
+
+
+        <!-- NEWS -->
+
+        <a href="news.html" class="quick-card">
+
+          <div class="card-icon">
+            📰
+          </div>
+
+          <div class="card-info">
+            <h3>Football News</h3>
+            <p>Latest football updates</p>
+          </div>
+
+          <span class="arrow">→</span>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= FEATURED ================= -->
+
+    <section class="featured-section">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="small-title">TODAY</span>
+          <h2>Featured</h2>
+        </div>
+
+        <a href="matches.html" class="view-all">
+          View all →
+        </a>
+
+      </div>
+
+
+      <div class="featured-card">
+
+        <div class="competition">
+          PREMIER LEAGUE
+        </div>
+
+        <div class="match-placeholder">
+
+          <div class="team">
+            <div class="team-badge">⚽</div>
+            <span>Home Team</span>
+          </div>
+
+          <div class="match-time">
+            <strong>VS</strong>
+            <small>Upcoming</small>
+          </div>
+
+          <div class="team">
+            <div class="team-badge">⚽</div>
+            <span>Away Team</span>
+          </div>
+
+        </div>
+
+        <p class="api-note">
+          Match information will appear here automatically
+          when we connect the football API.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= NEWS PREVIEW ================= -->
+
+    <section class="news-section">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="small-title">LATEST</span>
+          <h2>Football News</h2>
+        </div>
+
+        <a href="news.html" class="view-all">
+          More news →
+        </a>
+
+      </div>
+
+
+      <div class="news-grid">
+
+
+        <article class="news-card">
+
+          <div class="news-image">
+            ⚽
+          </div>
+
+          <div class="news-content">
+
+            <span class="news-category">
+              FOOTBALL
+            </span>
+
+            <h3>
+              Latest football stories and updates
+            </h3>
+
+            <p>
+              Stay updated with the biggest stories
+              from the football world.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="news-card">
+
+          <div class="news-image">
+            🏆
+          </div>
+
+          <div class="news-content">
+
+            <span class="news-category">
+              TRANSFERS
+            </span>
+
+            <h3>
+              Transfer news and football updates
+            </h3>
+
+            <p>
+              Get the latest updates from clubs
+              and players around the world.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="news-card">
+
+          <div class="news-image">
+            🔥
+          </div>
+
+          <div class="news-content">
+
+            <span class="news-category">
+              MATCHDAY
+            </span>
+
+            <h3>
+              Matchday stories and highlights
+            </h3>
+
+            <p>
+              Follow the biggest moments from
+              football matches.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer">
+
+    <div class="footer-logo">
+      ⚽ GOAL <strong>ZONE</strong>
+    </div>
+
+    <p>
+      Your football world, all in one zone.
+    </p>
+
+    <div class="footer-line"></div>
+
+    <small>
+      © 2026 Goal Zone. All rights reserved.
+    </small>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>

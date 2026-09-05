@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Goal Zone | Live Matches</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="live.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <a href="index.html" class="logo">
+      <span class="logo-ball">⚽</span>
+      <span>GOAL <strong>ZONE</strong></span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation">
+      ⋮
+    </button>
+
+  </header>
+
+
+  <!-- OVERLAY -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+
+  <!-- SIDE MENU -->
+  <nav class="side-menu" id="sideMenu">
+
+    <div class="menu-header">
+
+      <div class="menu-logo">
+        ⚽ <strong>GOAL ZONE</strong>
+      </div>
+
+      <button class="close-btn" id="closeBtn">
+        ×
+      </button>
+
+    </div>
+
+
+    <div class="menu-links">
+
+      <a href="index.html" class="menu-link">
+        <span>🏠</span>
+        <span>Home</span>
+      </a>
+
+      <a href="live.html" class="menu-link active">
+        <span>🔴</span>
+        <span>Live</span>
+      </a>
+
+      <a href="matches.html" class="menu-link">
+        <span>📅</span>
+        <span>Matches</span>
+      </a>
+
+      <a href="standings.html" class="menu-link">
+        <span>🏆</span>
+        <span>Standings</span>
+      </a>
+
+      <a href="news.html" class="menu-link">
+        <span>📰</span>
+        <span>News</span>
+      </a>
+
+    </div>
+
+
+    <div class="menu-footer">
+
+      <p>Goal Zone</p>
+      <small>Your football world</small>
+
+    </div>
+
+  </nav>
+
+
+  <!-- MAIN -->
+  <main class="live-page">
+
+
+    <!-- PAGE HERO -->
+
+    <section class="live-hero">
+
+      <div>
+
+        <span class="small-title">
+          MATCH CENTER
+        </span>
+
+        <h1>
+          Live Matches
+        </h1>
+
+        <p>
+          Follow football matches happening right now.
+        </p>
+
+      </div>
+
+      <div class="live-indicator">
+        <span></span>
+        LIVE
+      </div>
+
+    </section>
+
+
+    <!-- FILTERS -->
+
+    <section class="live-controls">
+
+      <button class="filter-btn active">
+        All
+      </button>
+
+      <button class="filter-btn">
+        Premier League
+      </button>
+
+      <button class="filter-btn">
+        La Liga
+      </button>
+
+      <button class="filter-btn">
+        Champions League
+      </button>
+
+    </section>
+
+
+    <!-- LIVE MATCHES -->
+
+    <section class="matches-container">
+
+      <div class="matches-heading">
+
+        <div>
+          <span class="small-title">
+            LIVE NOW
+          </span>
+
+          <h2>
+            Today's Matches
+          </h2>
+        </div>
+
+        <button class="refresh-btn" id="refreshBtn">
+          ↻ Refresh
+        </button>
+
+      </div>
+
+
+      <!-- MATCH CARD 1 -->
+
+      <article class="live-match-card">
+
+        <div class="match-top">
+
+          <span class="competition">
+            PREMIER LEAGUE
+          </span>
+
+          <span class="match-status">
+            <span></span>
+            67'
+          </span>
+
+        </div>
+
+
+        <div class="match-teams">
+
+          <div class="live-team">
+
+            <div class="club-badge">
+              ⚽
+            </div>
+
+            <strong>
+              Arsenal
+            </strong>
+
+          </div>
+
+
+          <div class="live-score">
+
+            <strong>
+              2 - 1
+            </strong>
+
+            <small>
+              LIVE
+            </small>
+
+          </div>
+
+
+          <div class="live-team">
+
+            <div class="club-badge">
+              ⚽
+            </div>
+
+            <strong>
+              Chelsea
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div class="match-bottom">
+
+          <span>
+            🏟 Emirates Stadium
+          </span>
+
+          <span>
+            Match details →
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- MATCH CARD 2 -->
+
+      <article class="live-match-card">
+
+        <div class="match-top">
+
+          <span class="competition">
+            LA LIGA
+          </span>
+
+          <span class="match-status">
+            <span></span>
+            41'
+          </span>
+
+        </div>
+
+
+        <div class="match-teams">
+
+          <div class="live-team">
+
+            <div class="club-badge">
+              ⚽
+            </div>
+
+            <strong>
+              Barcelona
+            </strong>
+
+          </div>
+
+
+          <div class="live-score">
+
+            <strong>
+              1 - 0
+            </strong>
+
+            <small>
+              LIVE
+            </small>
+
+          </div>
+
+
+          <div class="live-team">
+
+            <div class="club-badge">
+              ⚽
+            </div>
+
+            <strong>
+              Real Madrid
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div class="match-bottom">
+
+          <span>
+            🏟 Camp Nou
+          </span>
+
+          <span>
+            Match details →
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- MATCH CARD 3 -->
+
+      <article class="live-match-card">
+
+        <div class="match-top">
+
+          <span class="competition">
+            CHAMPIONS LEAGUE
+          </span>
+
+          <span class="match-status">
+            <span></span>
+            78'
+          </span>
+
+        </div>
+
+
+        <div class="match-teams">
+
+          <div class="live-team">
+
+            <div class="club-badge">
+              ⚽
+            </div>
+
+            <strong>
+              PSG
+            </strong>
+
+          </div>
+
+
+          <div class="live-score">
+
+            <strong>
+              2 - 2
+            </strong>
+
+            <small>
+              LIVE
+            </small>
+
+          </div>
+
+
+          <div class="live-team">
+
+            <div class="club-badge">
+              ⚽
+            </div>
+
+            <strong>
+              Bayern
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div class="match-bottom">
+
+          <span>
+            🏟 Parc des Princes
+          </span>
+
+          <span>
+            Match details →
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- NO MORE MATCHES -->
+
+      <div class="update-message" id="updateMessage">
+        ✓ Scores are updated automatically
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <div class="footer-logo">
+      ⚽ GOAL <strong>ZONE</strong>
+    </div>
+
+    <p>
+      Your football world, all in one zone.
+    </p>
+
+    <div class="footer-line"></div>
+
+    <small>
+      © 2026 Goal Zone. All rights reserved.
+    </small>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+  <script src="live.js"></script>
+
+</body>
+</html>
