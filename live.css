@@ -1,0 +1,449 @@
+/* =========================================
+   GOAL ZONE - LIVE PAGE
+========================================= */
+
+.live-page {
+  min-height: 70vh;
+}
+
+
+/* =========================================
+   LIVE HERO
+========================================= */
+
+.live-hero {
+  background: #071a12;
+  color: white;
+
+  padding: 55px 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.live-hero h1 {
+  font-size: clamp(35px, 5vw, 55px);
+
+  line-height: 1.1;
+
+  margin: 5px 0 10px;
+}
+
+.live-hero p {
+  color: #9ca3af;
+
+  font-size: 15px;
+}
+
+
+/* LIVE INDICATOR */
+
+.live-indicator {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  background: rgba(255,255,255,0.08);
+
+  padding: 10px 16px;
+
+  border-radius: 30px;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+.live-indicator span,
+.match-status span {
+  width: 8px;
+  height: 8px;
+
+  background: #ef4444;
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================================
+   FILTERS
+========================================= */
+
+.live-controls {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 25px 6% 5px;
+
+  display: flex;
+
+  gap: 10px;
+
+  overflow-x: auto;
+}
+
+.filter-btn {
+  border: 1px solid #dfe4e8;
+
+  background: white;
+
+  padding: 9px 15px;
+
+  border-radius: 30px;
+
+  white-space: nowrap;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  color: #4b5563;
+}
+
+.filter-btn.active {
+  background: #20c77a;
+
+  border-color: #20c77a;
+
+  color: #071a12;
+}
+
+
+/* =========================================
+   MATCHES CONTAINER
+========================================= */
+
+.matches-container {
+  max-width: 900px;
+
+  margin: auto;
+
+  padding: 35px 6% 70px;
+}
+
+.matches-heading {
+  display: flex;
+
+  align-items: end;
+
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.matches-heading h2 {
+  font-size: 27px;
+}
+
+
+/* REFRESH */
+
+.refresh-btn {
+  border: 1px solid #dfe4e8;
+
+  background: white;
+
+  padding: 9px 13px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.refresh-btn:hover {
+  background: #e9f8f1;
+
+  color: #079455;
+
+  border-color: #20c77a;
+}
+
+
+/* =========================================
+   LIVE MATCH CARD
+========================================= */
+
+.live-match-card {
+  background: white;
+
+  border: 1px solid #e4e8eb;
+
+  border-radius: 15px;
+
+  margin-bottom: 15px;
+
+  overflow: hidden;
+
+  box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+
+  transition: 0.2s;
+}
+
+.live-match-card:hover {
+  border-color: #20c77a;
+
+  transform: translateY(-2px);
+}
+
+
+/* TOP */
+
+.match-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 14px 18px;
+
+  border-bottom: 1px solid #eef0f2;
+}
+
+.competition {
+  color: #079455;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.match-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #ef4444;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   TEAMS
+========================================= */
+
+.match-teams {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 60px;
+
+  padding: 25px 15px;
+}
+
+.live-team {
+  width: 140px;
+
+  text-align: center;
+}
+
+.club-badge {
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+
+  background: #edf8f2;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 9px;
+
+  font-size: 26px;
+}
+
+.live-team strong {
+  font-size: 15px;
+}
+
+
+/* SCORE */
+
+.live-score {
+  text-align: center;
+}
+
+.live-score strong {
+  display: block;
+
+  font-size: 27px;
+}
+
+.live-score small {
+  color: #ef4444;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.match-bottom {
+  background: #fafafa;
+
+  border-top: 1px solid #eef0f2;
+
+  padding: 11px 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  color: #6b7280;
+
+  font-size: 11px;
+}
+
+.match-bottom span:last-child {
+  color: #079455;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   UPDATE MESSAGE
+========================================= */
+
+.update-message {
+  text-align: center;
+
+  color: #6b7280;
+
+  font-size: 11px;
+
+  padding-top: 10px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .live-hero {
+    padding: 45px 20px;
+
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .live-hero h1 {
+    font-size: 38px;
+  }
+
+  .live-indicator {
+    align-self: flex-start;
+  }
+
+
+  .live-controls {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+
+  .matches-container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+
+  .matches-heading {
+    align-items: center;
+  }
+
+  .matches-heading h2 {
+    font-size: 23px;
+  }
+
+
+  .match-teams {
+    gap: 10px;
+
+    padding: 25px 5px;
+  }
+
+  .live-team {
+    width: 95px;
+  }
+
+  .club-badge {
+    width: 52px;
+    height: 52px;
+
+    font-size: 22px;
+  }
+
+  .live-team strong {
+    font-size: 12px;
+  }
+
+  .live-score strong {
+    font-size: 23px;
+  }
+
+
+  .match-bottom {
+    font-size: 9px;
+
+    padding: 10px;
+  }
+
+}

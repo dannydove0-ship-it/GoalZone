@@ -1,0 +1,400 @@
+/* =========================================
+   MATCHES PAGE
+========================================= */
+
+.matches-hero {
+  min-height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px 60px;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.72),
+      rgba(0, 0, 0, 0.82)
+    ),
+    radial-gradient(
+      circle at top right,
+      #164d32,
+      #07110c 65%
+    );
+}
+
+.hero-content {
+  max-width: 750px;
+}
+
+.hero-label {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #39d98a;
+  margin-bottom: 12px;
+}
+
+.matches-hero h1 {
+  font-size: 48px;
+  margin: 0 0 15px;
+}
+
+.matches-hero p {
+  color: #c9d2cd;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.matches-container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 45px 0 70px;
+}
+
+
+/* =========================================
+   DATE NAVIGATION
+========================================= */
+
+.date-navigation {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+
+  background: #101914;
+  border: 1px solid #26352d;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 25px;
+}
+
+.date-btn {
+  border: 1px solid #304238;
+  background: #17231c;
+  color: white;
+
+  padding: 13px 20px;
+  border-radius: 10px;
+
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.date-btn:hover {
+  background: #1f3027;
+  transform: translateY(-2px);
+}
+
+#nextDay {
+  justify-self: end;
+}
+
+.current-date {
+  text-align: center;
+}
+
+.current-date span {
+  display: block;
+  color: #7f9187;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.current-date strong {
+  display: block;
+  color: white;
+  font-size: 18px;
+}
+
+
+/* =========================================
+   COMPETITION FILTERS
+========================================= */
+
+.competition-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 45px;
+}
+
+.competition-btn {
+  border: 1px solid #2c3c33;
+  background: #101914;
+  color: #aebbb4;
+
+  padding: 11px 17px;
+  border-radius: 999px;
+
+  cursor: pointer;
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.competition-btn:hover {
+  color: white;
+  border-color: #39d98a;
+}
+
+.competition-btn.active {
+  background: #39d98a;
+  border-color: #39d98a;
+  color: #06100a;
+}
+
+
+/* =========================================
+   MATCH SECTIONS
+========================================= */
+
+.match-section {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 18px;
+}
+
+.small-title {
+  color: #39d98a;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.section-title h2 {
+  margin: 5px 0 0;
+  font-size: 27px;
+}
+
+
+/* =========================================
+   MATCH LIST
+========================================= */
+
+.matches-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+/* =========================================
+   MATCH CARD
+========================================= */
+
+.match-card {
+  background: #101914;
+  border: 1px solid #25352c;
+
+  border-radius: 14px;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: 160px 1fr 150px;
+
+  align-items: center;
+  gap: 20px;
+
+  transition: 0.2s ease;
+}
+
+.match-card:hover {
+  border-color: #39d98a;
+  transform: translateY(-2px);
+}
+
+
+/* COMPETITION */
+
+.match-competition {
+  color: #819087;
+  font-size: 12px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.match-time {
+  margin-top: 8px;
+  color: #39d98a;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+
+/* TEAMS */
+
+.match-teams {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-weight: 700;
+}
+
+.team-name {
+  color: #f4f7f5;
+}
+
+.team-score {
+  font-size: 19px;
+  font-weight: 900;
+}
+
+
+/* STATUS */
+
+.match-status {
+  text-align: right;
+}
+
+.status {
+  display: inline-block;
+
+  padding: 7px 11px;
+  border-radius: 7px;
+
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.status.finished {
+  background: #222b26;
+  color: #aebbb4;
+}
+
+.status.upcoming {
+  background: #172d21;
+  color: #39d98a;
+}
+
+.status.live {
+  background: #3a1616;
+  color: #ff6565;
+}
+
+.match-date {
+  color: #748078;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-matches {
+  text-align: center;
+
+  padding: 35px 20px;
+
+  background: #0d1511;
+  border: 1px dashed #2c3c33;
+  border-radius: 14px;
+
+  color: #829088;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+  .matches-hero {
+    min-height: 280px;
+    padding: 65px 18px 45px;
+  }
+
+  .matches-hero h1 {
+    font-size: 35px;
+  }
+
+  .matches-hero p {
+    font-size: 15px;
+  }
+
+
+  .matches-container {
+    width: 94%;
+    padding-top: 30px;
+  }
+
+
+  .date-navigation {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .current-date {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .date-btn {
+    width: 100%;
+  }
+
+  #nextDay {
+    justify-self: stretch;
+  }
+
+
+  .competition-filters {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+
+    padding-bottom: 5px;
+  }
+
+  .competition-btn {
+    white-space: nowrap;
+  }
+
+
+  .section-title h2 {
+    font-size: 23px;
+  }
+
+
+  .match-card {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 17px;
+  }
+
+
+  .match-status {
+    text-align: left;
+  }
+
+
+  .match-competition {
+    font-size: 11px;
+  }
+
+}

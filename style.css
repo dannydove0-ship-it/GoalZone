@@ -1,0 +1,882 @@
+/* =========================================
+   GOAL ZONE
+   GLOBAL STYLES
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fa;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+  height: 70px;
+  background: #071a12;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  box-shadow: 0 2px 15px rgba(0,0,0,0.15);
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo strong {
+  color: #20c77a;
+}
+
+.logo-ball {
+  font-size: 24px;
+}
+
+
+/* =========================================
+   THREE DOT BUTTON
+========================================= */
+
+.menu-btn {
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.08);
+  color: white;
+
+  font-size: 30px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.menu-btn:hover {
+  background: #20c77a;
+  color: #071a12;
+}
+
+
+/* =========================================
+   SIDE MENU
+========================================= */
+
+.side-menu {
+  position: fixed;
+
+  top: 0;
+  right: -320px;
+
+  width: 300px;
+  height: 100vh;
+
+  background: #ffffff;
+
+  z-index: 2000;
+
+  box-shadow: -5px 0 25px rgba(0,0,0,0.18);
+
+  transition: right 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+
+/* MENU OVERLAY */
+
+.menu-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0,0,0,0.55);
+
+  z-index: 1500;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.3s;
+}
+
+.menu-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* MENU HEADER */
+
+.menu-header {
+  height: 75px;
+
+  padding: 0 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #071a12;
+  color: white;
+}
+
+.menu-logo {
+  font-size: 18px;
+}
+
+.menu-logo strong {
+  color: #20c77a;
+}
+
+.close-btn {
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  background: transparent;
+
+  color: white;
+
+  font-size: 32px;
+
+  cursor: pointer;
+}
+
+
+/* MENU LINKS */
+
+.menu-links {
+  padding: 20px 14px;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 15px;
+
+  margin-bottom: 7px;
+
+  border-radius: 10px;
+
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+.menu-link:hover {
+  background: #e9f8f1;
+  color: #079455;
+}
+
+.menu-link.active {
+  background: #20c77a;
+  color: #071a12;
+}
+
+.menu-link span:first-child {
+  width: 25px;
+  text-align: center;
+  font-size: 20px;
+}
+
+
+/* MENU FOOTER */
+
+.menu-footer {
+  margin-top: auto;
+
+  padding: 25px;
+
+  border-top: 1px solid #e5e7eb;
+
+  color: #6b7280;
+}
+
+.menu-footer p {
+  font-weight: 700;
+  color: #111827;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  min-height: 500px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071a12 0%,
+      #0b3021 55%,
+      #0c4a32 100%
+    );
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+
+  padding: 70px 7%;
+
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Decorative football circle */
+
+.hero::after {
+  content: "⚽";
+
+  position: absolute;
+
+  right: 7%;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  font-size: 190px;
+
+  opacity: 0.07;
+}
+
+
+.hero-content {
+  max-width: 700px;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+.hero-tag {
+  display: inline-block;
+
+  background: rgba(32,199,122,0.15);
+
+  border: 1px solid rgba(32,199,122,0.4);
+
+  color: #6ee7ad;
+
+  padding: 8px 14px;
+
+  border-radius: 30px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 20px;
+}
+
+
+.hero h1 {
+  font-size: clamp(40px, 6vw, 70px);
+
+  line-height: 1.05;
+
+  margin-bottom: 22px;
+}
+
+.hero h1 span {
+  color: #20c77a;
+}
+
+
+.hero p {
+  max-width: 600px;
+
+  color: #d1d5db;
+
+  font-size: 17px;
+
+  margin-bottom: 30px;
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+  display: flex;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px 20px;
+
+  border-radius: 9px;
+
+  font-weight: 700;
+
+  transition: 0.25s;
+}
+
+.primary-btn {
+  background: #20c77a;
+  color: #061a12;
+}
+
+.primary-btn:hover {
+  background: #5ce09e;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+}
+
+.secondary-btn:hover {
+  background: white;
+  color: #071a12;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.quick-section,
+.featured-section,
+.news-section {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 70px 6%;
+}
+
+
+.section-heading {
+  display: flex;
+
+  align-items: end;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.small-title {
+  display: block;
+
+  color: #079455;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 5px;
+}
+
+.section-heading h2 {
+  font-size: 30px;
+}
+
+.view-all {
+  color: #079455;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   QUICK CARDS
+========================================= */
+
+.quick-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 15px;
+}
+
+.quick-card {
+  background: white;
+
+  border-radius: 14px;
+
+  padding: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  border: 1px solid #e5e7eb;
+
+  transition: 0.25s;
+
+  box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+}
+
+.quick-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #20c77a;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.card-icon {
+  width: 52px;
+  height: 52px;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e9f8f1;
+
+  font-size: 24px;
+
+  flex-shrink: 0;
+}
+
+.card-info {
+  flex: 1;
+}
+
+.card-info h3 {
+  font-size: 17px;
+
+  margin-bottom: 2px;
+}
+
+.card-info p {
+  font-size: 13px;
+
+  color: #6b7280;
+}
+
+.arrow {
+  color: #079455;
+
+  font-size: 22px;
+}
+
+
+/* =========================================
+   FEATURED MATCH
+========================================= */
+
+.featured-card {
+  background: #071a12;
+
+  color: white;
+
+  border-radius: 18px;
+
+  padding: 25px;
+
+  overflow: hidden;
+}
+
+.competition {
+  text-align: center;
+
+  font-size: 11px;
+
+  color: #6ee7ad;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 25px;
+}
+
+.match-placeholder {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 50px;
+}
+
+.team {
+  text-align: center;
+
+  width: 130px;
+}
+
+.team-badge {
+  width: 65px;
+  height: 65px;
+
+  margin: 0 auto 10px;
+
+  background: #163b2b;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+}
+
+.team span {
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+.match-time {
+  text-align: center;
+}
+
+.match-time strong {
+  display: block;
+
+  font-size: 22px;
+}
+
+.match-time small {
+  color: #9ca3af;
+
+  font-size: 11px;
+}
+
+.api-note {
+  text-align: center;
+
+  margin-top: 25px;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   NEWS
+========================================= */
+
+.news-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.news-card {
+  background: white;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  border: 1px solid #e5e7eb;
+
+  transition: 0.25s;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.news-image {
+  height: 150px;
+
+  background: #0b3021;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 55px;
+}
+
+.news-content {
+  padding: 18px;
+}
+
+.news-category {
+  color: #079455;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.news-content h3 {
+  font-size: 17px;
+
+  margin: 7px 0;
+}
+
+.news-content p {
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+  background: #071a12;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 45px 20px;
+}
+
+.footer-logo {
+  font-size: 20px;
+
+  font-weight: 800;
+}
+
+.footer-logo strong {
+  color: #20c77a;
+}
+
+.footer p {
+  color: #9ca3af;
+
+  margin: 8px 0 20px;
+
+  font-size: 14px;
+}
+
+.footer-line {
+  height: 1px;
+
+  background: rgba(255,255,255,0.1);
+
+  max-width: 500px;
+
+  margin: auto auto 20px;
+}
+
+.footer small {
+  color: #6b7280;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    min-height: 470px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .header {
+    height: 64px;
+
+    padding: 0 18px;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .menu-btn {
+    width: 42px;
+    height: 42px;
+
+    font-size: 28px;
+  }
+
+
+  .hero {
+    min-height: 520px;
+
+    padding: 55px 22px;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero::after {
+    right: -30px;
+
+    font-size: 140px;
+  }
+
+
+  .quick-section,
+  .featured-section,
+  .news-section {
+    padding: 50px 18px;
+  }
+
+
+  .section-heading h2 {
+    font-size: 25px;
+  }
+
+
+  .quick-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .match-placeholder {
+    gap: 12px;
+  }
+
+  .team {
+    width: 100px;
+  }
+
+  .team-badge {
+    width: 55px;
+    height: 55px;
+
+    font-size: 23px;
+  }
+
+  .team span {
+    font-size: 12px;
+  }
+
+  .match-time strong {
+    font-size: 18px;
+  }
+
+
+  .side-menu {
+    width: 280px;
+  }
+
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+  .hero h1 {
+    font-size: 37px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+
+  .match-placeholder {
+    gap: 5px;
+  }
+
+  .team {
+    width: 85px;
+  }
+
+}
